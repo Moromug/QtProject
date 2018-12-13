@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>748</width>
-    <height>547</height>
+    <width>581</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>200</y>
+     <y>160</y>
      <width>181</width>
      <height>101</height>
     </rect>
@@ -54,7 +54,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Угол (в градусах)</string>
+        <string>   Угол (в градусах)</string>
        </property>
       </widget>
      </item>
@@ -79,9 +79,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>160</y>
+     <y>80</y>
      <width>241</width>
-     <height>191</height>
+     <height>271</height>
     </rect>
    </property>
    <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -90,12 +90,12 @@
       <x>0</x>
       <y>0</y>
       <width>237</width>
-      <height>188</height>
+      <height>261</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QComboBox" name="algebra_choose">
+      <widget class="QComboBox" name="alg_choose">
        <item>
         <property name="text">
          <string>Дискриминант квадратного уравнения</string>
@@ -114,34 +114,85 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="koeff_1">
-       <property name="text">
-        <string>Коэффициент a</string>
-       </property>
+      <widget class="QWidget" name="widget_6" native="true">
+       <widget class="QLabel" name="koeff_1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>235</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Коэффициент a</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="input_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>235</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input_1"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="koeff_2">
-       <property name="text">
-        <string>Коэффициент b</string>
-       </property>
+      <widget class="QWidget" name="widget_5" native="true">
+       <widget class="QLabel" name="koeff_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>235</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Коэффициент b</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="input_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>235</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input_2"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="koeff_3">
-       <property name="text">
-        <string>Свободный коэффициент c</string>
-       </property>
+      <widget class="QWidget" name="widget_4" native="true">
+       <widget class="QLabel" name="koeff_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>235</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Свободный коэффициент c</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="input_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>235</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="input_3"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -160,8 +211,8 @@
   <widget class="QWidget" name="widget_3" native="true">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>220</y>
+     <x>190</x>
+     <y>180</y>
      <width>171</width>
      <height>91</height>
     </rect>
@@ -196,8 +247,8 @@
   <widget class="QWidget" name="back" native="true">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>470</y>
+     <x>460</x>
+     <y>380</y>
      <width>120</width>
      <height>80</height>
     </rect>
@@ -220,18 +271,18 @@
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>10</y>
-     <width>491</width>
-     <height>531</height>
+     <y>20</y>
+     <width>341</width>
+     <height>351</height>
     </rect>
    </property>
    <widget class="QWidget" name="verticalLayoutWidget_4">
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>8</y>
-      <width>471</width>
-      <height>471</height>
+      <y>10</y>
+      <width>321</width>
+      <height>331</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="formuli">
@@ -291,7 +342,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>470</y>
+     <y>380</y>
      <width>120</width>
      <height>80</height>
     </rect>
