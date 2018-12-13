@@ -7,8 +7,10 @@ class Example(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('QtProject_design.ui', self)
-        self.btn1.clicked.connect(self.Algerba)
+        self.btn1.clicked.connect(self.Algebra)
         self.btn2.clicked.connect(self.Trigonometry)
+        self.widget_2.hide()
+        self.widget.hide()
 
     def Algebra(self):
         pass
