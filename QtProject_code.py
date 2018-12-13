@@ -1,6 +1,6 @@
 import sys, math
 from PyQt5 import uic
-from PyQt5.QtWidgets import QWidget, QApplication, QLineEdit, QLabel, QPushButton, QMainWindow
+from PyQt5.QtWidgets import QWidget, QApplication
 
 
 class Example(QWidget):
@@ -17,6 +17,7 @@ class Example(QWidget):
         self.algs = ["Дискриминант квадратного уравнения", "Сумма арифметической прогрессии", \
                      "Сумма геометрической прогрессии"]
         self.trigs = ["Двойной угол", "Сумма", "Разность"]
+        # cleaning start screen
         self.alg_choose.currentTextChanged.connect(self.diskr)
         self.trig_choose.currentTextChanged.connect(self.triga)
         self.widget_2.hide()
@@ -26,16 +27,19 @@ class Example(QWidget):
         self.ubrat.hide()
 
     def Algebra(self):
+        # algebra menu
         self.widget_3.hide()
         self.widget_2.show()
         self.back.show()
 
     def Trigonometry(self):
+        #trigonometry menu
         self.widget_3.hide()
         self.widget.show()
         self.back.show()
 
     def undo(self):
+        # how "back" button works
         self.widget_2.hide()
         self.widget.hide()
         self.images.hide()
@@ -43,9 +47,11 @@ class Example(QWidget):
         self.widget_3.show()
 
     def bye(self):
+        # ow "exit" button works
         sys.exit()
 
     def triga(self):
+        # trigonometry menu cleaning
         self.img_1.setText('')
         self.img_2.setText('')
         self.img_3.setText('')
@@ -59,6 +65,7 @@ class Example(QWidget):
             self.ubrat.show()
 
     def alg_math(self):
+        # algebra menu cleaning
         self.images.show()
         self.img_1.setText('')
         self.img_2.setText('')
@@ -67,7 +74,8 @@ class Example(QWidget):
         self.img_5.setText('')
         self.img_6.setText('')
         self.img_7.setText('')
-        if self.alg_choose.currentText() == self.algs[0]:  # оно не пашет
+        if self.alg_choose.currentText() == self.algs[0]:
+            # discriminant, x1 and x2 for a square equation
             try:
                 self.koeffs = [float(self.input_1.text()), float(self.input_2.text()), float(self.input_3.text())]
                 self.d = self.koeffs[1] ** 2 - 4 * self.koeffs[0] * self.koeffs[2]
@@ -91,6 +99,7 @@ class Example(QWidget):
                             self.img_4.setText(text)
             except Exception:
                 pass
+        # arifmetic progression sum
         elif self.alg_choose.currentText() == self.algs[1]:
             self.koeffs = [float(self.input_1.text()), float(self.input_2.text()), float(self.input_3.text())]
             try:
@@ -100,6 +109,7 @@ class Example(QWidget):
                 self.img_4.setText(f'Сумма равна {self.summa}.')
             except Exception:
                 pass
+        # geometric progression sum
         else:
             self.koeffs = [float(self.input_1.text()), float(self.input_2.text()), float(self.input_3.text())]
             try:
@@ -114,6 +124,7 @@ class Example(QWidget):
                     pass
 
     def diskr(self):
+        # algebra menu cleaning
         self.images.show()
         self.img_1.setText('')
         self.img_2.setText('')
@@ -137,14 +148,8 @@ class Example(QWidget):
 
     def trig_math(self):
         self.images.show()
-        self.img_1.setText('')
-        self.img_2.setText('')
-        self.img_3.setText('')
-        self.img_4.setText('')
-        self.img_5.setText('')
-        self.img_6.setText('')
-        self.img_7.setText('')
         if self.trig_choose.currentText() == self.trigs[0]:
+            # double ange
             try:
                 self.x = float(self.trig_input.text())
             except Exception:
@@ -180,6 +185,7 @@ class Example(QWidget):
                     self.img_7.setText('Такого котангенса не существует.')
 
         elif self.trig_choose.currentText() == self.trigs[1]:
+            # sin, cos, tan and ctan of a sum
             try:
                 self.x = float(self.trig_input.text())
                 if self.x == int(self.x):
@@ -219,6 +225,7 @@ class Example(QWidget):
                 except Exception:
                     self.img_7.setText('Котангенс суммы {0} и {1} найти невозможно.'.format(self.x, self.y))
         else:
+            # sin, cos, tan and ctan of a difference
             try:
                 self.x = float(self.trig_input.text())
                 if self.x == int(self.x):
@@ -260,6 +267,7 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
+    # application launch
     app = QApplication(sys.argv)
     ex = Example()
     ex.show()
