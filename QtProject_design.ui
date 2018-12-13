@@ -16,19 +16,19 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>160</y>
+     <x>30</x>
+     <y>130</y>
      <width>181</width>
-     <height>101</height>
+     <height>191</height>
     </rect>
    </property>
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
+      <y>10</y>
       <width>160</width>
-      <height>96</height>
+      <height>171</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -52,17 +52,59 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>   Угол (в градусах)</string>
-       </property>
+      <widget class="QWidget" name="widget_8" native="true">
+       <widget class="QLineEdit" name="trig_input">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>158</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>158</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>   Угол (в градусах)</string>
+        </property>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="trig_input">
-       <property name="text">
-        <string/>
-       </property>
+      <widget class="QWidget" name="ubrat" native="true">
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Второй угол (в градусах)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="trig_input_2"/>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
      <item>
@@ -79,7 +121,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>80</y>
+     <y>70</y>
      <width>241</width>
      <height>271</height>
     </rect>
