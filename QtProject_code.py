@@ -46,6 +46,13 @@ class Example(QWidget):
         sys.exit()
 
     def triga(self):
+        self.img_1.setText('')
+        self.img_2.setText('')
+        self.img_3.setText('')
+        self.img_4.setText('')
+        self.img_5.setText('')
+        self.img_6.setText('')
+        self.img_7.setText('')
         if self.trig_choose.currentText() == self.trigs[0]:
             self.ubrat.hide()
         else:
@@ -212,7 +219,44 @@ class Example(QWidget):
                 except Exception:
                     self.img_7.setText('Котангенс суммы {0} и {1} найти невозможно.'.format(self.x, self.y))
         else:
-            pass
+            try:
+                self.x = float(self.trig_input.text())
+                if self.x == int(self.x):
+                    self.x = int(self.x)
+                self.y = float(self.trig_input_2.text())
+                if self.y == int(self.y):
+                    self.y = int(self.y)
+            except Exception:
+                pass
+            else:
+                try:
+                    self.sin_raz = math.sin(self.x) * math.cos(self.y) - math.cos(self.x) * math.sin(self.y)
+                    if self.sin_raz == int(self.sin_raz):
+                        self.sin_raz = int(self.sin_raz)
+                    self.img_1.setText('Синус разности {0} и {1} равен {2}.'.format(self.x, self.y, self.sin_raz))
+                except Exception:
+                    self.img_1.setText('Синус разности {0} и {1} найти невозможно.'.format(self.x, self.y))
+                try:
+                    self.cos_raz = math.cos(self.x) * math.cos(self.y) + math.sin(self.x) * math.sin(self.y)
+                    if self.cos_raz == int(self.cos_raz):
+                        self.cos_raz = int(self.cos_raz)
+                    self.img_3.setText('Косинус разности {0} и {1} равен {2}.'.format(self.x, self.y, self.cos_raz))
+                except Exception:
+                    self.img_3.setText('Косинус разности {0} и {1} найти невозможно.'.format(self.x, self.y))
+                try:
+                    self.tg_raz = (math.tan(self.x) - math.tan(self.y)) / (1 + math.tan(self.x) * math.tan(self.y))
+                    if self.tg_raz == int(self.tg_raz):
+                        self.tg_raz = int(self.tg_raz)
+                    self.img_5.setText('Тангенс разности {0} и {1} равен {2}.'.format(self.x, self.y, self.tg_raz))
+                except Exception:
+                    self.img_5.setText('Тангенс разности {0} и {1} найти невозможно.'.format(self.x, self.y))
+                try:
+                    self.ctg_raz = (1 + math.tan(self.x) * math.tan(self.y)) / (math.tan(self.x) - math.tan(self.y))
+                    if self.ctg_raz == int(self.ctg_raz):
+                        self.ctg_raz = int(self.ctg_raz)
+                    self.img_7.setText('Котангенс разности {0} и {1} равен {2}.'.format(self.x, self.y, self.ctg_raz))
+                except Exception:
+                    self.img_7.setText('Котангенс разности {0} и {1} найти невозможно.'.format(self.x, self.y))
 
 
 if __name__ == '__main__':
