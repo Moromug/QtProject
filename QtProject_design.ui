@@ -22,16 +22,16 @@
      <height>83</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="start">
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btn1">
       <property name="text">
        <string>Алгебра</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="btn2">
       <property name="text">
        <string>Тригонометрия</string>
       </property>
